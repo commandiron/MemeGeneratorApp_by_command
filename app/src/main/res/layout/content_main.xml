@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.demirli.memegeneratorapp.DrawingView
+        android:id="@+id/drawing_view"
+        android:layout_width="match_parent"
+        android:layout_height="360dp">
+    </com.demirli.memegeneratorapp.DrawingView>
+
+    <com.demirli.memegeneratorapp.DragableBox
+        android:id="@+id/dragableBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/dragable_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TEST"
+                android:textColor="@android:color/black"></TextView>
+        </LinearLayout>
+    </com.demirli.memegeneratorapp.DragableBox>
+
+
+    <!--
+    
+    <ja.burhanrashid52.photoeditor.PhotoEditorView
+        android:id="@+id/image_preview"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_margin="20dp">
+    </ja.burhanrashid52.photoeditor.PhotoEditorView>
+
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/drawing_view"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_add_text"
+            android:hint="Enter your text"
+            android:maxHeight="200dp"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_color"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"></androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/add_btn"
+            android:text="ADD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Button>
+        <Button
+            android:id="@+id/done_btn"
+            android:text="DONE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+        </Button>
+    </LinearLayout>
+</RelativeLayout>
